@@ -17,7 +17,7 @@ if (not getgenv().Loaded) then
     
     local function getnamecall()
         if game.PlaceId == 2788229376 then
-            return "UpdateMousePos"
+            return "UpdateMousePosI"
         elseif game.PlaceId == 5602055394 or game.PlaceId == 7951883376 then
             return "MousePos"
         elseif game.PlaceId == 9825515356 then
@@ -155,9 +155,9 @@ if (not getgenv().Loaded) then
                 if Plr and Plr.Character then
                     local Position = Plr.Character.Humanoid:GetState() == Enum.HumanoidStateType.Freefall and Plr.Character[getgenv().blaqcc.Aimbot.TargetPart].Position + Vector3.new(0, getgenv().blaqcc.Aimbot.JumpOffset, 0) or Plr.Character[getgenv().blaqcc.Aimbot.TargetPart].Position
                     if not CheckAnti(Plr) then
-                        mainevent:FireServer("UpdateMousePos", Position + ((Plr.Character.HumanoidRootPart.Velocity) * getgenv().blaqcc.Aimbot.Prediction))
+                        mainevent:FireServer("UpdateMousePosI", Position + ((Plr.Character.HumanoidRootPart.Velocity) * getgenv().blaqcc.Aimbot.Prediction))
                     else
-                        mainevent:FireServer("UpdateMousePos", Position + ((Plr.Character.Humanoid.MoveDirection * Plr.Character.Humanoid.WalkSpeed) * getgenv().blaqcc.Aimbot.Prediction))
+                        mainevent:FireServer("UpdateMousePosI", Position + ((Plr.Character.Humanoid.MoveDirection * Plr.Character.Humanoid.WalkSpeed) * getgenv().blaqcc.Aimbot.Prediction))
                     end
                 end
             end)
@@ -171,9 +171,9 @@ if (not getgenv().Loaded) then
                     if Plr and Plr.Character then
                         local Position = Plr.Character.Humanoid:GetState() == Enum.HumanoidStateType.Freefall and Plr.Character[getgenv().blaqcc.Aimbot.TargetPart].Position + Vector3.new(0, getgenv().blaqcc.Aimbot.JumpOffset, 0) or Plr.Character[getgenv().blaqcc.Aimbot.TargetPart].Position
                         if not CheckAnti(Plr) then
-                            mainevent:FireServer("UpdateMousePos", Position + ((Plr.Character.HumanoidRootPart.Velocity) * getgenv().blaqcc.Aimbot.Prediction))
+                            mainevent:FireServer("UpdateMousePosI", Position + ((Plr.Character.HumanoidRootPart.Velocity) * getgenv().blaqcc.Aimbot.Prediction))
                         else
-                            mainevent:FireServer("UpdateMousePos", Position + ((Plr.Character.Humanoid.MoveDirection * Plr.Character.Humanoid.WalkSpeed) * getgenv().blaqcc.Aimbot.Prediction))
+                            mainevent:FireServer("UpdateMousePosI", Position + ((Plr.Character.Humanoid.MoveDirection * Plr.Character.Humanoid.WalkSpeed) * getgenv().blaqcc.Aimbot.Prediction))
                         end
                     end
                 end)
